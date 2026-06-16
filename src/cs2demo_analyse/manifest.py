@@ -71,6 +71,7 @@ def build_manifest(files: list[dict[str, str]], previous_path: Path) -> dict[str
             "summarized_at": previous_item.get("summarized_at", ""),
             "state": previous_item.get("state", "pending"),
             "errors": previous_item.get("errors", []),
+            "warnings": previous_item.get("warnings", []),
         }
         old_fingerprint = (
             previous_item.get("modified_time"),
@@ -88,6 +89,7 @@ def build_manifest(files: list[dict[str, str]], previous_path: Path) -> dict[str
                 "summarized_at": "",
                 "state": "changed",
                 "errors": [],
+                "warnings": [],
             })
         try:
             item["parsed"] = parse_demo_name(name)
@@ -107,4 +109,3 @@ def update_manifest_item(path: Path, file_id: str, **updates: Any) -> None:
             break
     manifest["updated_at"] = utc_now_iso()
     write_json(path, manifest)
-

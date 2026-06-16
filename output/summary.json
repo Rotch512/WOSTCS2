@@ -63912,7 +63912,7 @@
     }
   ],
   "sheet_versions": {
-    "read_at": "2026-06-16T15:26:23+00:00",
+    "read_at": "2026-06-16T15:33:44+00:00",
     "sheets": {
       "replays_filter": {
         "content_hash": "46067d9fd82aa80ea834bbec73d69e20024271c3aeef67f2dde9f80f2b4b60d1",
@@ -116618,27 +116618,6 @@
         "clutch_rounds": [
           {
             "opponents": 1,
-            "round": 4,
-            "scope": "narrow",
-            "side": "CT",
-            "state": "1v1",
-            "winner": "CT",
-            "won": true
-          },
-          {
-            "alive_steam64s": [
-              "76561199546986418"
-            ],
-            "opponents": 1,
-            "round": 4,
-            "scope": "broad",
-            "side": "CT",
-            "state": "1v1",
-            "winner": "CT",
-            "won": true
-          },
-          {
-            "opponents": 1,
             "round": 5,
             "scope": "narrow",
             "side": "CT",
@@ -116665,6 +116644,27 @@
             "side": "T",
             "state": "1v1",
             "winner": "T",
+            "won": true
+          },
+          {
+            "opponents": 1,
+            "round": 4,
+            "scope": "narrow",
+            "side": "CT",
+            "state": "1v1",
+            "winner": "CT",
+            "won": true
+          },
+          {
+            "alive_steam64s": [
+              "76561199546986418"
+            ],
+            "opponents": 1,
+            "round": 4,
+            "scope": "broad",
+            "side": "CT",
+            "state": "1v1",
+            "winner": "CT",
             "won": true
           }
         ],
@@ -117631,27 +117631,6 @@
             "clutch_rounds": [
               {
                 "opponents": 1,
-                "round": 4,
-                "scope": "narrow",
-                "side": "CT",
-                "state": "1v1",
-                "winner": "CT",
-                "won": true
-              },
-              {
-                "alive_steam64s": [
-                  "76561199546986418"
-                ],
-                "opponents": 1,
-                "round": 4,
-                "scope": "broad",
-                "side": "CT",
-                "state": "1v1",
-                "winner": "CT",
-                "won": true
-              },
-              {
-                "opponents": 1,
                 "round": 5,
                 "scope": "narrow",
                 "side": "CT",
@@ -117678,6 +117657,27 @@
                 "side": "T",
                 "state": "1v1",
                 "winner": "T",
+                "won": true
+              },
+              {
+                "opponents": 1,
+                "round": 4,
+                "scope": "narrow",
+                "side": "CT",
+                "state": "1v1",
+                "winner": "CT",
+                "won": true
+              },
+              {
+                "alive_steam64s": [
+                  "76561199546986418"
+                ],
+                "opponents": 1,
+                "round": 4,
+                "scope": "broad",
+                "side": "CT",
+                "state": "1v1",
+                "winner": "CT",
                 "won": true
               }
             ],
