@@ -2,7 +2,7 @@ from pathlib import Path
 import zipfile
 
 from cs2demo_analyse.package_reader import detect_package_kind, extract_single_demo
-from cs2demo_analyse.pipeline import map_name_from_demo_filename
+from cs2demo_analyse.parser import map_name_from_demo_filename
 
 
 def test_extract_single_demo_from_zip(tmp_path: Path):

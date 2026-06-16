@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import defaultdict
 import math
 from pathlib import Path
+import re
 from typing import Any
 
 from .models import PlayerDiscovery, PlayerMatchStats, ReplayRecord
@@ -324,6 +325,105 @@ def discover_players(demo_path: Path, replay: ReplayRecord) -> dict[str, PlayerD
         item = discovered.setdefault(steam64, PlayerDiscovery(steam64=steam64))
         item.add(name, replay, str(team_name) if team_name is not None else None)
     return discovered
+
+
+def map_name_from_demo_filename(path: Path) -> str | None:
+    match = re.search(r"(?:^|_)de_([a-z0-9]+)\.dem$", path.name, re.IGNORECASE)
+    if not match:
+        return None
+    return match.group(1).lower()
+
+
+def parse_actual_match_metadata(
+    demo_path: Path,
+    replay: ReplayRecord,
+    active_roster_steam64s: set[str],
+) -> dict[str, str]:
+    DemoParser = _load_demoparser()
+    parser = DemoParser(str(demo_path))
+    round_end_rows = _records(parser.parse_event(
+        "round_end",
+        other=["is_warmup_period", "total_rounds_played", "winner"],
+    ))
+    round_winners: dict[int, str] = {}
+    for row in round_end_rows:
+        if bool(_first_present(row, ["is_warmup_period"])):
+            continue
+        completed = _round_no(row)
+        round_no = completed - 1
+        winner = str(_first_present(row, ["winner"]) or "").upper()
+        if round_no >= 0 and winner in {"CT", "T"}:
+            round_winners[round_no] = winner
+
+    actual_rounds = len(round_winners) or max(replay.our_score + replay.opponent_score, 1)
+    roster_sides_by_round: dict[int, dict[str, int]] = defaultdict(lambda: {"CT": 0, "T": 0})
+    try:
+        freeze_rows = _records(parser.parse_event(
+            "round_freeze_end",
+            other=["is_warmup_period", "total_rounds_played", "tick"],
+        ))
+        freeze_ticks = [
+            int(row["tick"])
+            for row in freeze_rows
+            if not bool(_first_present(row, ["is_warmup_period"]))
+            and row.get("tick") is not None
+            and 0 <= _round_no(row) < actual_rounds
+        ]
+        tick_rows = _records(parser.parse_ticks(
+            ["player_steamid", "team_num", "total_rounds_played"],
+            ticks=freeze_ticks,
+        ))
+    except Exception:
+        tick_rows = []
+
+    for row in tick_rows:
+        steam64 = _steam(_first_present(row, ["steamid", "player_steamid"]))
+        if steam64 not in active_roster_steam64s:
+            continue
+        round_no = _round_no(row)
+        side = _side(_first_present(row, ["team_num"]))
+        if 0 <= round_no < actual_rounds and side in {"CT", "T"}:
+            roster_sides_by_round[round_no][side] += 1
+
+    our_score = 0
+    opponent_score = 0
+    for round_no in range(actual_rounds):
+        winner = round_winners.get(round_no, "")
+        side_counts = roster_sides_by_round.get(round_no, {})
+        our_side = ""
+        if side_counts.get("CT", 0) > side_counts.get("T", 0):
+            our_side = "CT"
+        elif side_counts.get("T", 0) > side_counts.get("CT", 0):
+            our_side = "T"
+        if winner and our_side:
+            if winner == our_side:
+                our_score += 1
+            else:
+                opponent_score += 1
+
+    if our_score + opponent_score != actual_rounds:
+        our_score = replay.our_score
+        opponent_score = replay.opponent_score
+
+    map_name = replay.map_name
+    demo_map = map_name_from_demo_filename(demo_path)
+    if demo_map:
+        map_name = demo_map
+
+    if our_score > opponent_score:
+        result = "win"
+    elif our_score < opponent_score:
+        result = "lose"
+    else:
+        result = "draw"
+    return {
+        "match_date": replay.match_date.strftime("%Y%m%d"),
+        "map_name": map_name,
+        "roster_type": replay.roster_type,
+        "match_result": result,
+        "our_score": str(our_score),
+        "opponent_score": str(opponent_score),
+    }
 
 
 def parse_match_stats(demo_path: Path, replay: ReplayRecord) -> dict[str, PlayerMatchStats]:

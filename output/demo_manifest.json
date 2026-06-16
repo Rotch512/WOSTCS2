@@ -2,7 +2,7 @@
   "demos": [
     {
       "demo_path": ".cache/cs2demo/demos/1rOYJe7Xp1w1KedQ7JmeVAclGML5GsfHk/g161-20260605215912910044717_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:13:39+00:00",
+      "discovered_at": "2026-06-16T16:03:44+00:00",
       "downloaded_at": "2026-06-14T10:55:56+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -25,12 +25,12 @@
       },
       "size": "250152674",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1RUntxc6aQFLYG7qLdX2PlGe81tKgLK_Z/g161-20260605210413684403991_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:13:46+00:00",
+      "discovered_at": "2026-06-16T16:03:51+00:00",
       "downloaded_at": "2026-06-14T10:56:32+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -53,12 +53,12 @@
       },
       "size": "230710864",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn/g161-20260529221539732396563_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:13:50+00:00",
+      "discovered_at": "2026-06-16T16:03:56+00:00",
       "downloaded_at": "2026-06-14T10:57:06+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -81,12 +81,12 @@
       },
       "size": "166365709",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1t3DKBZayJy_SUqlmX-TGrKUTrutQGawq/g161-n-20260528220351520799232_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:13:57+00:00",
+      "discovered_at": "2026-06-16T16:04:02+00:00",
       "downloaded_at": "2026-06-14T10:57:44+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -109,12 +109,12 @@
       },
       "size": "216317458",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1RVI57MseUBqBS8YxFvqakxm9coRqrOlN/g161-n-20260528210543413470784_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:14:01+00:00",
+      "discovered_at": "2026-06-16T16:04:07+00:00",
       "downloaded_at": "2026-06-14T10:58:08+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -137,12 +137,12 @@
       },
       "size": "137592198",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1ZUr8O8VTeFZWd1Ma6vesHQY5S3y4PKkj/g161-20260602204108492276347_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:14:07+00:00",
+      "discovered_at": "2026-06-16T16:04:14+00:00",
       "downloaded_at": "2026-06-14T10:58:51+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -165,12 +165,12 @@
       },
       "size": "236698483",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1iSeIS5qSpb-Gne-8eikhg3_3B2iwrk2k/g161-20260602200408460250368_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:14:13+00:00",
+      "discovered_at": "2026-06-16T16:04:19+00:00",
       "downloaded_at": "2026-06-14T10:59:28+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -193,12 +193,12 @@
       },
       "size": "171007972",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1rqsxjFQk6dSozqF3HggjUUoSl_ciIZgS/g161-20260530220154858777805_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:14:19+00:00",
+      "discovered_at": "2026-06-16T16:04:26+00:00",
       "downloaded_at": "2026-06-14T11:00:03+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -221,12 +221,12 @@
       },
       "size": "218787897",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1Kb-_DOKuIhIJtb5ynouhriw9SaKe4pDW/g161-20260530231233270392290_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:14:24+00:00",
+      "discovered_at": "2026-06-16T16:04:31+00:00",
       "downloaded_at": "2026-06-14T11:01:11+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -249,12 +249,12 @@
       },
       "size": "174244141",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1UOQR9uE1_Aejzdkau68WekDr8CD6rNA5/g161-20260530224250582840165_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:14:29+00:00",
+      "discovered_at": "2026-06-16T16:04:36+00:00",
       "downloaded_at": "2026-06-14T11:02:12+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -277,12 +277,12 @@
       },
       "size": "151133630",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/12tLxoPo2boEf2dIebBCmKkYS6oOdytVH/g161-20260529213513983765782_de_dust2.dem",
-      "discovered_at": "2026-06-14T11:14:35+00:00",
+      "discovered_at": "2026-06-16T16:04:42+00:00",
       "downloaded_at": "2026-06-14T10:49:15+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -305,12 +305,12 @@
       },
       "size": "216803912",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1t6oKyuCjXiKbONVRGzu_90rSf5e5Xe35/g161-n-20260528213234223001427_de_cache.dem",
-      "discovered_at": "2026-06-14T11:14:40+00:00",
+      "discovered_at": "2026-06-16T16:04:47+00:00",
       "downloaded_at": "2026-06-14T10:49:15+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -333,12 +333,12 @@
       },
       "size": "151130593",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z/9216935348993499148_0.dem",
-      "discovered_at": "2026-06-14T11:14:45+00:00",
+      "discovered_at": "2026-06-16T16:04:52+00:00",
       "downloaded_at": "2026-06-14T10:49:15+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -361,12 +361,12 @@
       },
       "size": "49795678",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1seZzj6ln-XFm3M5H14-f0z6xfbZXwn_H/9213487282061618217_0.dem",
-      "discovered_at": "2026-06-14T11:14:51+00:00",
+      "discovered_at": "2026-06-16T16:04:59+00:00",
       "downloaded_at": "2026-06-14T10:49:15+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -389,12 +389,12 @@
       },
       "size": "92539521",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1Dtx7-UQ0knSceGLmsJPZio1AL4PRrl-A/9218976043762350732_0.dem",
-      "discovered_at": "2026-06-14T11:14:58+00:00",
+      "discovered_at": "2026-06-16T16:05:05+00:00",
       "downloaded_at": "2026-06-14T10:49:15+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -417,12 +417,12 @@
       },
       "size": "80710452",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/1XDiS05FEhriANKR40XmZDpF_2buOru37/9206380038220359436_0.dem",
-      "discovered_at": "2026-06-14T11:15:04+00:00",
+      "discovered_at": "2026-06-16T16:05:11+00:00",
       "downloaded_at": "2026-06-14T10:49:15+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -445,12 +445,12 @@
       },
       "size": "65438809",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": ".cache/cs2demo/demos/13oKJWDt0mUi5AdQoZWphcBwhpUkYdncz/9206098562963747980_0.dem",
-      "discovered_at": "2026-06-14T11:15:09+00:00",
+      "discovered_at": "2026-06-16T16:05:16+00:00",
       "downloaded_at": "2026-06-14T10:49:15+00:00",
       "errors": [
         "cannot access local variable '_round_no' where it is not associated with a value"
@@ -473,12 +473,12 @@
       },
       "size": "54498639",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
+      "summarized_at": "2026-06-16T16:05:39+00:00",
       "warnings": []
     },
     {
       "demo_path": "",
-      "discovered_at": "2026-06-16T15:35:40+00:00",
+      "discovered_at": "2026-06-16T16:05:22+00:00",
       "downloaded_at": "",
       "errors": [],
       "extracted_at": "",
@@ -490,23 +490,21 @@
       "name": "20260616_dust2_full_win_13_02.zip",
       "package_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/packages/1cxZ023yljssCOjEToIIH06z5JbPLzIcY.pkg",
       "parsed": {
-        "map_name": "dust2",
+        "map_name": "nuke",
         "match_date": "20260616",
         "match_result": "win",
-        "opponent_score": "2",
+        "opponent_score": "7",
         "our_score": "13",
         "roster_type": "full"
       },
       "size": "186736139",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
-      "warnings": [
-        "Demo filename map 'nuke' does not match replay metadata map 'dust2' for g151-n-20260616223210794030793_de_nuke.dem."
-      ]
+      "summarized_at": "2026-06-16T16:05:41+00:00",
+      "warnings": []
     },
     {
       "demo_path": "",
-      "discovered_at": "2026-06-16T15:35:45+00:00",
+      "discovered_at": "2026-06-16T16:05:27+00:00",
       "downloaded_at": "",
       "errors": [],
       "extracted_at": "",
@@ -518,20 +516,18 @@
       "name": "20260616_nuke_full_win_13_07.zip",
       "package_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/packages/1FjszzDDKzBiCyilyMO3xdwUmShBzpKYT.pkg",
       "parsed": {
-        "map_name": "nuke",
+        "map_name": "dust2",
         "match_date": "20260616",
         "match_result": "win",
-        "opponent_score": "7",
+        "opponent_score": "2",
         "our_score": "13",
         "roster_type": "full"
       },
       "size": "156978803",
       "state": "summarized",
-      "summarized_at": "2026-06-16T15:48:52+00:00",
-      "warnings": [
-        "Demo filename map 'dust2' does not match replay metadata map 'nuke' for g161-20260616220117118068741_de_dust2.dem."
-      ]
+      "summarized_at": "2026-06-16T16:05:43+00:00",
+      "warnings": []
     }
   ],
-  "updated_at": "2026-06-16T15:48:52+00:00"
+  "updated_at": "2026-06-16T16:05:43+00:00"
 }
