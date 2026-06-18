@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 
 from .analytics import build_summary
 from .config import ANALYSIS_MANIFEST_NAME, Settings
@@ -10,9 +11,9 @@ from .io_utils import ensure_dir, read_csv_dicts, utc_now_iso, write_csv_dicts, 
 from .manifest import build_manifest, manifest_to_replay_rows, update_manifest_item
 from .models import PlayerDiscovery
 from .package_reader import extract_single_demo
-from .parser import discover_players, map_name_from_demo_filename, parse_actual_match_metadata, parse_match_stats
+from .parser import discover_players, parse_match_stats
 from .replays import load_replays
-from .roster import RosterBook, is_counted_status, load_roster_intervals
+from .roster import RosterBook, load_roster_intervals
 from .sheets import sync_sheets as sync_google_sheets
 
 
@@ -119,84 +120,6 @@ def download_packages(settings: Settings) -> None:
         pass
 
 
-def active_roster_steam64s(settings: Settings, replay) -> set[str]:
-    active: set[str] = set()
-    for interval in load_roster_intervals(read_csv_dicts(roster_csv_path(settings))):
-        if is_counted_status(interval.status) and interval.contains(replay.match_date):
-            active.add(interval.steam64)
-    return active
-
-
-def sync_demo_metadata(settings: Settings) -> None:
-    print("[cs2demo] Validating demo metadata against extracted files", flush=True)
-    stats_cache = read_json(settings.player_match_stats_path, default={}) or {}
-    manifest_changed = False
-    stats_changed = False
-    discovery_changed = False
-
-    for replay in load_replay_records(settings):
-        try:
-            demo_path = extract_demo_for_replay(settings, replay)
-            actual = parse_actual_match_metadata(demo_path, replay, active_roster_steam64s(settings, replay))
-        except Exception as exc:
-            update_manifest_item(
-                settings.demo_manifest_path,
-                replay.file_id,
-                warnings=[f"Unable to validate demo metadata: {exc}"],
-            )
-            continue
-
-        manifest = read_json(settings.demo_manifest_path, default={"demos": []}) or {"demos": []}
-        item = next((row for row in manifest.get("demos", []) if row.get("file_id") == replay.file_id), {})
-        previous = item.get("parsed") or {}
-        if previous == actual:
-            continue
-
-        warning = (
-            "Demo metadata differs from Sheet/Drive filename: "
-            f"sheet={previous}, actual={actual}."
-        )
-        print(f"[cs2demo] WARNING: {warning}", flush=True)
-        update_manifest_item(
-            settings.demo_manifest_path,
-            replay.file_id,
-            parsed=actual,
-            warnings=[warning],
-            discovered_at="",
-            summarized_at="",
-            state="extracted",
-        )
-        manifest_changed = True
-        discovery_changed = True
-        if replay.file_id in stats_cache:
-            del stats_cache[replay.file_id]
-            stats_changed = True
-
-    if stats_changed:
-        write_json(settings.player_match_stats_path, stats_cache)
-    if discovery_changed:
-        settings.discovered_players_path.write_text("[]\n", encoding="utf-8")
-        manifest = read_json(settings.demo_manifest_path, default={"demos": []}) or {"demos": []}
-        for item in manifest.get("demos", []):
-            if item.get("state") == "summarized":
-                update_manifest_item(
-                    settings.demo_manifest_path,
-                    item["file_id"],
-                    discovered_at="",
-                    summarized_at="",
-                    state="extracted",
-                )
-    if manifest_changed:
-        manifest = read_json(settings.demo_manifest_path, default={"demos": []}) or {"demos": []}
-        replay_rows = manifest_to_replay_rows(manifest)
-        if replay_rows:
-            write_csv_dicts(
-                replay_csv_path(settings),
-                replay_rows,
-                ["file_id", "file_url", "match_date", "map_name", "roster_type", "match_result", "our_score", "opponent_score"],
-            )
-
-
 def extract_demo_for_replay(settings: Settings, replay) -> Path:
     candidates = list(settings.packages_dir.glob(f"{replay.file_id}.*"))
     if not candidates:
@@ -217,6 +140,13 @@ def extract_demo_for_replay(settings: Settings, replay) -> Path:
         state="extracted",
     )
     return demo_path
+
+
+def map_name_from_demo_filename(path: Path) -> str | None:
+    match = re.search(r"(?:^|_)de_([a-z0-9]+)\.dem$", path.name, re.IGNORECASE)
+    if not match:
+        return None
+    return match.group(1).lower()
 
 
 def validate_demo_filename(settings: Settings, replay, demo_path: Path) -> None:
@@ -391,6 +321,5 @@ def run_incremental(settings: Settings) -> None:
     sync_sheets(settings)
     sync_drive_index(settings)
     download_packages(settings)
-    sync_demo_metadata(settings)
     discover(settings)
     summarize(settings)
