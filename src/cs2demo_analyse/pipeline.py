@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-import re
 
 from .analytics import build_summary
 from .config import ANALYSIS_MANIFEST_NAME, Settings
@@ -26,7 +25,6 @@ def roster_csv_path(settings: Settings) -> Path:
 
 
 def sync_sheets(settings: Settings) -> None:
-    print("[cs2demo] Syncing Google Sheets", flush=True)
     sync_google_sheets(
         settings.output_dir,
         settings.replays_filter_sheet_id,
@@ -37,7 +35,6 @@ def sync_sheets(settings: Settings) -> None:
 
 
 def sync_drive_index(settings: Settings) -> None:
-    print("[cs2demo] Syncing Google Drive replay index", flush=True)
     ensure_dir(settings.output_dir)
     try:
         remote_manifest = find_file_in_folder(ANALYSIS_MANIFEST_NAME)
@@ -84,19 +81,19 @@ def load_replay_records(settings: Settings):
 
 
 def download_packages(settings: Settings) -> None:
-    print("[cs2demo] Downloading missing demo packages", flush=True)
     ensure_dir(settings.packages_dir)
     stats_cache = read_json(settings.player_match_stats_path, default={}) or {}
     for replay in load_replay_records(settings):
         manifest = read_json(settings.demo_manifest_path, default={}) or {}
         manifest_item = next((item for item in manifest.get("demos", []) if item.get("file_id") == replay.file_id), {})
-        if manifest_item.get("state") == "summarized" and stats_cache.get(replay.file_id):
-            print(f"[cs2demo] Package cached: {manifest_item.get('name') or replay.file_id}", flush=True)
+        if (
+            manifest_item.get("state") == "summarized"
+            and stats_cache.get(replay.file_id)
+        ):
             continue
         filename = manifest_item.get("name") or f"{replay.file_id}.zip"
         destination = package_path_for(replay.file_id, filename, settings.packages_dir)
         if destination.exists() and destination.stat().st_size > 0:
-            print(f"[cs2demo] Package already downloaded: {filename}", flush=True)
             next_state = manifest_item.get("state") if manifest_item.get("state") in {"extracted", "discovered", "summarized"} else "downloaded"
             update_manifest_item(
                 settings.demo_manifest_path,
@@ -105,7 +102,6 @@ def download_packages(settings: Settings) -> None:
                 state=next_state,
             )
             continue
-        print(f"[cs2demo] Downloading package: {filename}", flush=True)
         download_file(replay.file_id, destination)
         update_manifest_item(
             settings.demo_manifest_path,
@@ -128,10 +124,8 @@ def extract_demo_for_replay(settings: Settings, replay) -> Path:
     demo_dir = settings.demos_dir / replay.file_id
     existing = list(demo_dir.glob("*.dem"))
     if len(existing) == 1:
-        validate_demo_filename(settings, replay, existing[0])
         return existing[0]
     demo_path = extract_single_demo(package_path, demo_dir)
-    validate_demo_filename(settings, replay, demo_path)
     update_manifest_item(
         settings.demo_manifest_path,
         replay.file_id,
@@ -142,28 +136,7 @@ def extract_demo_for_replay(settings: Settings, replay) -> Path:
     return demo_path
 
 
-def map_name_from_demo_filename(path: Path) -> str | None:
-    match = re.search(r"(?:^|_)de_([a-z0-9]+)\.dem$", path.name, re.IGNORECASE)
-    if not match:
-        return None
-    return match.group(1).lower()
-
-
-def validate_demo_filename(settings: Settings, replay, demo_path: Path) -> None:
-    demo_map = map_name_from_demo_filename(demo_path)
-    if not demo_map or demo_map == replay.map_name:
-        update_manifest_item(settings.demo_manifest_path, replay.file_id, warnings=[])
-        return
-    warning = (
-        f"Demo filename map '{demo_map}' does not match replay metadata map "
-        f"'{replay.map_name}' for {demo_path.name}."
-    )
-    print(f"[cs2demo] WARNING: {warning}", flush=True)
-    update_manifest_item(settings.demo_manifest_path, replay.file_id, warnings=[warning])
-
-
 def discover(settings: Settings) -> None:
-    print("[cs2demo] Discovering players from demos", flush=True)
     ensure_dir(settings.output_dir)
     errors = read_json(settings.errors_path, default=[])
     discovered: dict[str, PlayerDiscovery] = {}
@@ -246,13 +219,11 @@ def discover(settings: Settings) -> None:
 
 
 def init_identity(settings: Settings) -> None:
-    print("[cs2demo] Writing player identity template", flush=True)
     discovered_players = read_json(settings.discovered_players_path, default=[])
     write_identity_template(settings.identity_path, discovered_players)
 
 
 def summarize(settings: Settings) -> None:
-    print("[cs2demo] Summarizing player and team analytics", flush=True)
     errors = read_json(settings.errors_path, default=[])
     roster_book = RosterBook(load_roster_intervals(read_csv_dicts(roster_csv_path(settings))))
     stats_cache = read_json(settings.player_match_stats_path, default={}) or {}
