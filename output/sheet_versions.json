@@ -1,0 +1,19 @@
+{
+  "read_at": "2026-06-16T16:02:07+00:00",
+  "sheets": {
+    "replays_filter": {
+      "content_hash": "46067d9fd82aa80ea834bbec73d69e20024271c3aeef67f2dde9f80f2b4b60d1",
+      "file_id": "1FqP2Ae0Nzt1kAvW1Iz_yPk5FVI0tqmj5Hjpsp6_ANUQ",
+      "modified_time": "",
+      "row_count": 19,
+      "sheet_name": "data"
+    },
+    "roster": {
+      "content_hash": "5a434b289f43acf650916ea2a66cd275b8a133db3cde20f72223dcfc0f16c1af",
+      "file_id": "1HPHNXr5r4e9y9ecgTcIJCtkuW8u8OUJOwBNbyzAw3qk",
+      "modified_time": "",
+      "row_count": 10,
+      "sheet_name": "Data"
+    }
+  }
+}
