@@ -11,7 +11,7 @@
       "md5": "",
       "mime_type": "application/x-zip-compressed",
       "modified_time": "",
-      "name": "20260528_cache_subbed_win_13_05.zip",
+      "name": "20260528_cache_mixed_win_13_05.zip",
       "package_path": ".cache/cs2demo/packages/1t6oKyuCjXiKbONVRGzu_90rSf5e5Xe35.pkg",
       "parsed": {
         "map_name": "cache",
@@ -19,11 +19,11 @@
         "match_result": "win",
         "opponent_score": "5",
         "our_score": "13",
-        "roster_type": "subbed"
+        "roster_type": "mixed"
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1RVI57MseUBqBS8YxFvqakxm9coRqrOlN/g161-n-20260528210543413470784_de_dust2.dem",
@@ -36,7 +36,7 @@
       "md5": "",
       "mime_type": "application/x-zip-compressed",
       "modified_time": "",
-      "name": "20260528_dust2_subbed_win_13_03.zip",
+      "name": "20260528_dust2_mixed_win_13_03.zip",
       "package_path": ".cache/cs2demo/packages/1RVI57MseUBqBS8YxFvqakxm9coRqrOlN.pkg",
       "parsed": {
         "map_name": "dust2",
@@ -44,11 +44,11 @@
         "match_result": "win",
         "opponent_score": "3",
         "our_score": "13",
-        "roster_type": "subbed"
+        "roster_type": "mixed"
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1t3DKBZayJy_SUqlmX-TGrKUTrutQGawq/g161-n-20260528220351520799232_de_dust2.dem",
@@ -61,7 +61,7 @@
       "md5": "",
       "mime_type": "application/x-zip-compressed",
       "modified_time": "",
-      "name": "20260528_dust2_subbed_win_13_09.zip",
+      "name": "20260528_dust2_mixed_win_13_09.zip",
       "package_path": ".cache/cs2demo/packages/1t3DKBZayJy_SUqlmX-TGrKUTrutQGawq.pkg",
       "parsed": {
         "map_name": "dust2",
@@ -69,11 +69,11 @@
         "match_result": "win",
         "opponent_score": "9",
         "our_score": "13",
-        "roster_type": "subbed"
+        "roster_type": "mixed"
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn/g161-20260529221539732396563_de_dust2.dem",
@@ -98,7 +98,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/12tLxoPo2boEf2dIebBCmKkYS6oOdytVH/g161-20260529213513983765782_de_dust2.dem",
@@ -123,7 +123,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1UOQR9uE1_Aejzdkau68WekDr8CD6rNA5/g161-20260530224250582840165_de_dust2.dem",
@@ -148,7 +148,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1Kb-_DOKuIhIJtb5ynouhriw9SaKe4pDW/g161-20260530231233270392290_de_dust2.dem",
@@ -173,7 +173,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1rqsxjFQk6dSozqF3HggjUUoSl_ciIZgS/g161-20260530220154858777805_de_dust2.dem",
@@ -198,7 +198,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1ZUr8O8VTeFZWd1Ma6vesHQY5S3y4PKkj/g161-20260602204108492276347_de_dust2.dem",
@@ -223,7 +223,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1iSeIS5qSpb-Gne-8eikhg3_3B2iwrk2k/g161-20260602200408460250368_de_dust2.dem",
@@ -248,7 +248,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1rOYJe7Xp1w1KedQ7JmeVAclGML5GsfHk/g161-20260605215912910044717_de_dust2.dem",
@@ -273,7 +273,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1RUntxc6aQFLYG7qLdX2PlGe81tKgLK_Z/g161-20260605210413684403991_de_dust2.dem",
@@ -298,7 +298,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/13oKJWDt0mUi5AdQoZWphcBwhpUkYdncz/9206098562963747980_0.dem",
@@ -323,7 +323,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1XDiS05FEhriANKR40XmZDpF_2buOru37/9206380038220359436_0.dem",
@@ -348,7 +348,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z/9216935348993499148_0.dem",
@@ -373,7 +373,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1Dtx7-UQ0knSceGLmsJPZio1AL4PRrl-A/9218976043762350732_0.dem",
@@ -398,7 +398,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:42+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1seZzj6ln-XFm3M5H14-f0z6xfbZXwn_H/9213487282061618217_0.dem",
@@ -423,7 +423,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1FjszzDDKzBiCyilyMO3xdwUmShBzpKYT/g161-20260616220117118068741_de_dust2.dem",
@@ -448,7 +448,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1cxZ023yljssCOjEToIIH06z5JbPLzIcY/g151-n-20260616223210794030793_de_nuke.dem",
@@ -473,7 +473,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1OJgjzQ2xvuWXUFrjhqJfMTx91ls07VNK/g161-20260617211339021189382_de_dust2.dem",
@@ -498,7 +498,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": ".cache/cs2demo/demos/1qHwUBEIxxpQZvfzLCUJn4Xag7ftxv7eS/g161-20260617215321123494876_de_dust2.dem",
@@ -523,7 +523,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1sxTZpxQsCMQ8phHil3SDB4tItU2zXYbB/g161-20260619171231738450114_de_dust2.dem",
@@ -548,7 +548,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1yoef_8CjPYTbmJBvKem-cAiKWOuLs4Bu/g161-20260619175830911053768_de_dust2.dem",
@@ -573,7 +573,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1sbej1_RWp3_TFr85bmgx6-xH809pP17V/g151-n-20260619191034093260096_de_inferno.dem",
@@ -598,7 +598,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1btXel_kyZSrAzNGlG0rlMVk5UMh6gHq4/g151-n-20260619182850192707365_de_mirage.dem",
@@ -623,7 +623,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:43+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1q3T-_o7ai1W4rjnZOVFm0a7YMXcH3mQd/g161-20260620223909433212653_de_dust2.dem",
@@ -648,7 +648,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:45+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1LiUCheIOId3UveiDLIEjyYOAGPI0biJC/g161-20260620214031225126062_de_dust2.dem",
@@ -673,7 +673,7 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:48+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
     },
     {
       "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1um3k9X1l1mNr9rALkEE_-xJRm0Fp9CAL/g151-n-20260620232527593619950_de_mirage.dem",
@@ -698,8 +698,83 @@
       },
       "size": "",
       "state": "summarized",
-      "summarized_at": "2026-06-20T16:13:50+00:00"
+      "summarized_at": "2026-06-26T14:51:58+00:00"
+    },
+    {
+      "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/14nzUtW9zH9schTuBnQhYjxCysYyt9hRv/9210109737283684265_0.dem",
+      "discovered_at": "2026-06-26T14:51:46+00:00",
+      "downloaded_at": "2026-06-26T14:50:34+00:00",
+      "errors": [],
+      "extracted_at": "2026-06-26T14:51:40+00:00",
+      "file_id": "14nzUtW9zH9schTuBnQhYjxCysYyt9hRv",
+      "file_url": "https://drive.google.com/file/d/14nzUtW9zH9schTuBnQhYjxCysYyt9hRv/view",
+      "md5": "",
+      "mime_type": "application/x-zip-compressed",
+      "modified_time": "",
+      "name": "20260626_ancient_mixed_win_13_05.zip",
+      "package_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/packages/14nzUtW9zH9schTuBnQhYjxCysYyt9hRv.pkg",
+      "parsed": {
+        "map_name": "ancient",
+        "match_date": "20260626",
+        "match_result": "win",
+        "opponent_score": "5",
+        "our_score": "13",
+        "roster_type": "mixed"
+      },
+      "size": "",
+      "state": "summarized",
+      "summarized_at": "2026-06-26T14:52:00+00:00"
+    },
+    {
+      "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1YCW9Fkw9nGWvBH0CKKZChI0BQI2DiQFW/9218202142590371881_0.dem",
+      "discovered_at": "2026-06-26T14:51:51+00:00",
+      "downloaded_at": "2026-06-26T14:50:55+00:00",
+      "errors": [],
+      "extracted_at": "2026-06-26T14:51:46+00:00",
+      "file_id": "1YCW9Fkw9nGWvBH0CKKZChI0BQI2DiQFW",
+      "file_url": "https://drive.google.com/file/d/1YCW9Fkw9nGWvBH0CKKZChI0BQI2DiQFW/view",
+      "md5": "",
+      "mime_type": "application/x-zip-compressed",
+      "modified_time": "",
+      "name": "20260626_ancient_mixed_win_13_06.zip",
+      "package_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/packages/1YCW9Fkw9nGWvBH0CKKZChI0BQI2DiQFW.pkg",
+      "parsed": {
+        "map_name": "ancient",
+        "match_date": "20260626",
+        "match_result": "win",
+        "opponent_score": "6",
+        "our_score": "13",
+        "roster_type": "mixed"
+      },
+      "size": "",
+      "state": "summarized",
+      "summarized_at": "2026-06-26T14:52:02+00:00"
+    },
+    {
+      "demo_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/demos/1IxWHbS-L7WKMkmwgQFs8XeXjLKrj--7r/9219539148426352524_0.dem",
+      "discovered_at": "2026-06-26T14:51:58+00:00",
+      "downloaded_at": "2026-06-26T14:51:39+00:00",
+      "errors": [],
+      "extracted_at": "2026-06-26T14:51:52+00:00",
+      "file_id": "1IxWHbS-L7WKMkmwgQFs8XeXjLKrj--7r",
+      "file_url": "https://drive.google.com/file/d/1IxWHbS-L7WKMkmwgQFs8XeXjLKrj--7r/view",
+      "md5": "",
+      "mime_type": "application/x-zip-compressed",
+      "modified_time": "",
+      "name": "20260626_dust2_mixed_win_13_09.zip",
+      "package_path": "/home/rotch/Experiments/CS2DemoAnalyse/.cache/cs2demo/packages/1IxWHbS-L7WKMkmwgQFs8XeXjLKrj--7r.pkg",
+      "parsed": {
+        "map_name": "dust2",
+        "match_date": "20260626",
+        "match_result": "win",
+        "opponent_score": "9",
+        "our_score": "13",
+        "roster_type": "mixed"
+      },
+      "size": "",
+      "state": "summarized",
+      "summarized_at": "2026-06-26T14:52:04+00:00"
     }
   ],
-  "updated_at": "2026-06-20T16:13:50+00:00"
+  "updated_at": "2026-06-26T14:52:04+00:00"
 }

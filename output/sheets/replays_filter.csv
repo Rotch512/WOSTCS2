@@ -1,7 +1,7 @@
 file_id,file_url,match_date,map_name,roster_type,match_result,our_score,opponent_score
-1t6oKyuCjXiKbONVRGzu_90rSf5e5Xe35,https://drive.google.com/file/d/1t6oKyuCjXiKbONVRGzu_90rSf5e5Xe35/view,20260528,cache,subbed,win,13,5
-1RVI57MseUBqBS8YxFvqakxm9coRqrOlN,https://drive.google.com/file/d/1RVI57MseUBqBS8YxFvqakxm9coRqrOlN/view,20260528,dust2,subbed,win,13,3
-1t3DKBZayJy_SUqlmX-TGrKUTrutQGawq,https://drive.google.com/file/d/1t3DKBZayJy_SUqlmX-TGrKUTrutQGawq/view,20260528,dust2,subbed,win,13,9
+1t6oKyuCjXiKbONVRGzu_90rSf5e5Xe35,https://drive.google.com/file/d/1t6oKyuCjXiKbONVRGzu_90rSf5e5Xe35/view,20260528,cache,mixed,win,13,5
+1RVI57MseUBqBS8YxFvqakxm9coRqrOlN,https://drive.google.com/file/d/1RVI57MseUBqBS8YxFvqakxm9coRqrOlN/view,20260528,dust2,mixed,win,13,3
+1t3DKBZayJy_SUqlmX-TGrKUTrutQGawq,https://drive.google.com/file/d/1t3DKBZayJy_SUqlmX-TGrKUTrutQGawq/view,20260528,dust2,mixed,win,13,9
 1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn,https://drive.google.com/file/d/1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn/view,20260529,dust2,subbed,lose,3,13
 12tLxoPo2boEf2dIebBCmKkYS6oOdytVH,https://drive.google.com/file/d/12tLxoPo2boEf2dIebBCmKkYS6oOdytVH/view,20260529,dust2,subbed,win,13,11
 1UOQR9uE1_Aejzdkau68WekDr8CD6rNA5,https://drive.google.com/file/d/1UOQR9uE1_Aejzdkau68WekDr8CD6rNA5/view,20260530,dust2,full,win,13,1
@@ -27,3 +27,6 @@ file_id,file_url,match_date,map_name,roster_type,match_result,our_score,opponent
 1q3T-_o7ai1W4rjnZOVFm0a7YMXcH3mQd,https://drive.google.com/file/d/1q3T-_o7ai1W4rjnZOVFm0a7YMXcH3mQd/view,20260620,dust2,full,draw,12,12
 1LiUCheIOId3UveiDLIEjyYOAGPI0biJC,https://drive.google.com/file/d/1LiUCheIOId3UveiDLIEjyYOAGPI0biJC/view,20260620,dust2,full,lose,11,13
 1um3k9X1l1mNr9rALkEE_-xJRm0Fp9CAL,https://drive.google.com/file/d/1um3k9X1l1mNr9rALkEE_-xJRm0Fp9CAL/view,20260620,mirage,full,lose,6,13
+14nzUtW9zH9schTuBnQhYjxCysYyt9hRv,https://drive.google.com/file/d/14nzUtW9zH9schTuBnQhYjxCysYyt9hRv/view,20260626,ancient,mixed,win,13,5
+1YCW9Fkw9nGWvBH0CKKZChI0BQI2DiQFW,https://drive.google.com/file/d/1YCW9Fkw9nGWvBH0CKKZChI0BQI2DiQFW/view,20260626,ancient,mixed,win,13,6
+1IxWHbS-L7WKMkmwgQFs8XeXjLKrj--7r,https://drive.google.com/file/d/1IxWHbS-L7WKMkmwgQFs8XeXjLKrj--7r/view,20260626,dust2,mixed,win,13,9
