@@ -1413,11 +1413,6 @@ label {
   gap: 14px;
 }
 
-.split .maps-grid {
-  max-height: 420px;
-  overflow-y: auto;
-}
-
 .maps-grid {
   display: grid;
   gap: 10px;
