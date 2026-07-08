@@ -148,7 +148,8 @@ function ratingProxy(row) {
   const swing = 0.55 * div(Number(row.opening_kills || 0) - Number(row.opening_deaths || 0), rounds)
     + 0.25 * div(row.clutch_wins, rounds)
     + 0.20 * div(row.trade_kills, rounds);
-  return Math.max(0, 0.18 * div(kpr, 0.68) + 0.18 * div(adr, 75) + 0.16 * div(1 - dpr, 0.34) + 0.16 * div(kast, 0.73) + 0.16 * div(multi, 0.12) + 0.16 * (1 + swing * 3));
+  const raw = Math.max(0, 0.18 * div(kpr, 0.68) + 0.18 * div(adr, 75) + 0.16 * div(1 - dpr, 0.34) + 0.16 * div(kast, 0.73) + 0.16 * div(multi, 0.12) + 0.16 * (1 + swing * 3));
+  return Math.round(raw * 1000) / 1000;
 }
 
 function computePlayer(row) {

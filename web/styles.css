@@ -1413,6 +1413,18 @@ label {
   gap: 14px;
 }
 
+.split .panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.split .maps-grid {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
 .maps-grid {
   display: grid;
   gap: 10px;
