@@ -54,7 +54,8 @@ function gradeClass(name) {
 function n(value, digits = 0) {
   const num = Number(value);
   if (!Number.isFinite(num)) return digits ? "0." + "0".repeat(digits) : "0";
-  return num.toFixed(digits);
+  const rounded = Math.round(num * Math.pow(10, digits + 1)) / Math.pow(10, digits + 1);
+  return rounded.toFixed(digits);
 }
 
 function unique(values) {

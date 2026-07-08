@@ -1425,6 +1425,31 @@ label {
   min-height: 0;
 }
 
+.split .table-wrap {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.split #matchesTable tbody {
+  max-height: none;
+  overflow-y: visible;
+}
+
+.split #matchesTable thead,
+.split #matchesTable tbody tr {
+  display: revert;
+  width: revert;
+  table-layout: revert;
+}
+
+.split #matchesTable thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .maps-grid {
   display: grid;
   gap: 10px;
