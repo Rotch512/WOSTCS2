@@ -210,7 +210,7 @@ function dateValue(value) {
 }
 
 function normalizedRosterRows() {
-  return rosterRows.map((row, index) => {
+  const rows = rosterRows.map((row, index) => {
     const player = row.Player || row.player || "";
     const start = row.Start || row.start || "";
     const end = row.End || row.end || "";
@@ -227,13 +227,25 @@ function normalizedRosterRows() {
       endDate: dateValue(end)
     };
   }).filter(row => row.player && row.start && row.status);
+
+  for (const row of rows) {
+    if (!/^change$/i.test(row.status)) continue;
+    const target = rows.find(r =>
+      r.player === row.player &&
+      !/^(left|change)$/i.test(r.status) &&
+      r.startDate && r.startDate <= row.startDate &&
+      (!r.endDate || r.endDate >= row.startDate)
+    );
+    if (target) target.steam64 = row.steam64;
+  }
+  return rows.filter(row => !/^change$/i.test(row.status));
 }
 
 function isCurrentRosterRow(row) {
   const today = new Date();
   if (row.startDate && row.startDate > today) return false;
   if (row.endDate && row.endDate <= today) return false;
-  return !/^(left|change)$/i.test(row.status);
+  return !/^left$/i.test(row.status);
 }
 
 function currentRosterRows() {
@@ -1001,7 +1013,7 @@ function renderRosterTimeline() {
         <div class="timeline-row">
           <strong>${esc(player)}</strong>
           <div class="timeline-track">
-            ${stints.filter(stint => !/^(left|change)$/i.test(stint.status)).map(stint => {
+            ${stints.filter(stint => !/^left$/i.test(stint.status)).map(stint => {
               const start = stint.startDate?.getTime() ?? minTime;
               const end = (stint.endDate || new Date()).getTime();
               const left = clamp(100 * (start - minTime) / span);
