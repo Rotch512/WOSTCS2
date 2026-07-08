@@ -1416,6 +1416,8 @@ label {
 .maps-grid {
   display: grid;
   gap: 10px;
+  max-height: 420px;
+  overflow-y: auto;
 }
 
 .map-card {
