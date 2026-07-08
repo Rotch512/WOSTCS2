@@ -58,4 +58,9 @@ class RosterBook:
         for interval in self._by_steam.get(steam64, []):
             if is_counted_status(interval.status) and interval.contains(day):
                 return interval.player, interval.status
+        for interval in self._by_steam.get(steam64, []):
+            if interval.status.strip().lower() == "change" and interval.contains(day):
+                effective = self.status_for(interval.player, day)
+                if effective:
+                    return interval.player, effective
         return None

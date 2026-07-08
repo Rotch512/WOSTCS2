@@ -19,7 +19,7 @@ const COUNT_FIELDS = [
 const playerColumns = ["player", "roster_status", "matches", "rounds", "rating", "firepower", "entrying", "trading", "opening", "utility", "kd", "adr", "kast", "kpr", "dpr"];
 const matchColumns = ["date", "map_name", "match_result", "roster_type", "roster_status", "kills", "deaths", "assists", "adr", "kast", "rating"];
 const teamMatchColumns = ["date", "map_name", "score_split", "round_win_rate", "match_result", "roster_type", "opening_diff", "clutch_record"];
-const statusRank = { "Starter": 0, "Stand-in": 1, "Benched": 2, "Left": 3 };
+const statusRank = { "Starter": 0, "Stand-in": 1, "Benched": 2, "Left": 3, "Change": 99 };
 const clutchFailureTypes = ["1v1", "2v1", "3v1", "4v1", "5v1", "4v2", "5v2", "5v3"];
 let selectedFailureType = "1v1";
 
@@ -198,7 +198,7 @@ function rosterOrder() {
 }
 
 function latestRosterStatus(player) {
-  const rows = rosterRows.filter(row => (row.Player || row.player) === player);
+  const rows = rosterRows.filter(row => (row.Player || row.player) === player && !/^change$/i.test(row.Status || row.status));
   if (!rows.length) return "";
   return rows[rows.length - 1].Status || rows[rows.length - 1].status || "";
 }
@@ -233,7 +233,7 @@ function isCurrentRosterRow(row) {
   const today = new Date();
   if (row.startDate && row.startDate > today) return false;
   if (row.endDate && row.endDate <= today) return false;
-  return !/^left$/i.test(row.status);
+  return !/^(left|change)$/i.test(row.status);
 }
 
 function currentRosterRows() {
@@ -1001,7 +1001,7 @@ function renderRosterTimeline() {
         <div class="timeline-row">
           <strong>${esc(player)}</strong>
           <div class="timeline-track">
-            ${stints.filter(stint => !/^left$/i.test(stint.status)).map(stint => {
+            ${stints.filter(stint => !/^(left|change)$/i.test(stint.status)).map(stint => {
               const start = stint.startDate?.getTime() ?? minTime;
               const end = (stint.endDate || new Date()).getTime();
               const left = clamp(100 * (start - minTime) / span);
