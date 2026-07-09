@@ -312,6 +312,19 @@ label {
   font-size: 12px;
 }
 
+.panel-filter {
+  margin-left: auto;
+  color: #7e8fa5;
+  font-size: 12px;
+}
+
+.panel-filter select {
+  height: 30px;
+  min-width: 124px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .primary-metrics {
   display: grid;
   gap: 10px;
@@ -652,6 +665,10 @@ label {
 }
 
 .team-brand {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
   margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid #253141;
@@ -670,6 +687,34 @@ label {
   color: #8797ac;
   font-size: 13px;
   font-weight: 850;
+}
+
+.team-roster-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 4px;
+  width: fit-content;
+  padding: 4px;
+  background: #0b121b;
+  border: 1px solid #26384c;
+  border-radius: 6px;
+}
+
+.team-roster-tab {
+  height: 30px;
+  min-width: 54px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #9aa8bd;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.team-roster-tab.active {
+  background: linear-gradient(135deg, #61d394, #79b7ff);
+  color: #07111c;
 }
 
 .team-showcase {
@@ -1411,14 +1456,31 @@ label {
   display: grid;
   grid-template-columns: minmax(340px, 0.72fr) minmax(560px, 1.28fr);
   gap: 14px;
+  align-items: stretch;
+}
+
+.split > .panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-bottom: 0;
+}
+
+.split .table-wrap {
+  flex: 1;
+  min-height: 0;
 }
 
 .maps-grid {
   display: grid;
+  flex: 1;
   gap: 10px;
-  max-height: 440px;
+  height: 450px;
+  max-height: 450px;
+  min-height: 0;
   overflow-y: auto;
   margin-top: 8px;
+  scrollbar-gutter: stable;
 }
 
 .map-card {

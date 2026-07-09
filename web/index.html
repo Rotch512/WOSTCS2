@@ -115,7 +115,13 @@
         <section class="panel">
           <div class="panel-title">
             <h2>Match Records</h2>
-            <span>All team maps</span>
+            <label class="panel-filter">Roster
+              <select id="teamMatchRosterFilter">
+                <option value="full">Full</option>
+                <option value="full-subbed">Full+Subbed</option>
+                <option value="all">All</option>
+              </select>
+            </label>
           </div>
           <div class="table-wrap team-match-scroll">
             <table id="teamMatchesTable"></table>

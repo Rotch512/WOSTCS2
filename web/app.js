@@ -1,6 +1,8 @@
 let summary = null;
 let rosterRows = [];
 let selectedPrimarySide = "Both";
+let selectedTeamOverviewRoster = "full";
+let selectedTeamMatchRoster = "full";
 const radarSides = { Both: true, CT: true, T: true };
 
 const DATA_PATH = "../output/summary.json";
@@ -19,6 +21,11 @@ const COUNT_FIELDS = [
 const playerColumns = ["player", "roster_status", "matches", "rounds", "rating", "firepower", "entrying", "trading", "opening", "utility", "kd", "adr", "kast", "kpr", "dpr"];
 const matchColumns = ["date", "map_name", "match_result", "roster_type", "roster_status", "kills", "deaths", "assists", "adr", "kast", "rating"];
 const teamMatchColumns = ["date", "map_name", "score_split", "round_win_rate", "match_result", "roster_type", "opening_diff", "clutch_record"];
+const teamRosterFilters = [
+  ["full", "Full"],
+  ["full-subbed", "Full+Subbed"],
+  ["all", "All"]
+];
 const statusRank = { "Starter": 0, "Stand-in": 1, "Benched": 2, "Left": 3, "Change": 99 };
 const clutchFailureTypes = ["1v1", "2v1", "3v1", "4v1", "5v1", "4v2", "5v2", "5v3"];
 let selectedFailureType = "1v1";
@@ -757,6 +764,46 @@ function kdClass(value) {
   return "metric-bad";
 }
 
+function teamRosterSet(filter) {
+  return {
+    full: new Set(["full"]),
+    "full-subbed": new Set(["full", "subbed"]),
+    all: null
+  }[filter] || null;
+}
+
+function filterTeamMatches(matches, filter) {
+  const allowedRosters = teamRosterSet(filter);
+  return (matches || []).filter(row => !allowedRosters || allowedRosters.has(String(row.roster_type || "").toLowerCase()));
+}
+
+function aggregateTeamOverview(matches) {
+  const overview = {
+    maps_played: matches.length,
+    wins: 0,
+    draws: 0,
+    losses: 0,
+    rounds: 0,
+    rounds_won: 0,
+    kills: 0,
+    deaths: 0
+  };
+  for (const row of matches) {
+    const result = String(row.match_result || "").toLowerCase();
+    if (/win/.test(result)) overview.wins += 1;
+    else if (/loss|lose/.test(result)) overview.losses += 1;
+    else overview.draws += 1;
+    overview.rounds += Number(row.rounds || 0);
+    overview.rounds_won += Number(row.rounds_won || 0);
+    overview.kills += Number(row.kills || 0);
+    overview.deaths += Number(row.deaths || 0);
+  }
+  overview.kd = div(overview.kills, overview.deaths);
+  overview.win_rate = 100 * div(overview.wins, overview.maps_played);
+  overview.round_win_rate = 100 * div(overview.rounds_won, overview.rounds);
+  return overview;
+}
+
 function renderTable(id, rows, cols) {
   const table = document.getElementById(id);
   table.innerHTML = `<thead><tr>${cols.map(col => `<th>${label(col)}</th>`).join("")}</tr></thead>`;
@@ -838,7 +885,10 @@ function recordHtml(wins, draws, losses) {
 }
 
 function renderTeamMatchesTable(matches) {
-  const rows = (matches || []).slice().sort((a, b) => b.date.localeCompare(a.date)).map(row => ({
+  const rows = filterTeamMatches(matches, selectedTeamMatchRoster)
+    .slice()
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .map(row => ({
     ...row,
     score_split: formatScoreSplit(row),
     opening_diff: Number(row.opening_kills || 0) - Number(row.opening_deaths || 0),
@@ -1065,11 +1115,18 @@ function syncRosterPanelHeights() {
 
 function renderTeam() {
   const team = summary?.team || {};
-  const overview = team.overview || {};
+  const overview = aggregateTeamOverview(filterTeamMatches(team.matches || [], selectedTeamOverviewRoster));
   document.getElementById("teamOverview").innerHTML = `
     <div class="team-brand">
-      <strong>WOST</strong>
-      <span>Wake Once Sleep Thrice</span>
+      <div class="team-title">
+        <strong>WOST</strong>
+        <span>Wake Once Sleep Thrice</span>
+      </div>
+      <div class="team-roster-tabs">
+        ${teamRosterFilters.map(([value, text]) => `
+          <button class="team-roster-tab ${selectedTeamOverviewRoster === value ? "active" : ""}" data-team-roster="${value}">${text}</button>
+        `).join("")}
+      </div>
     </div>
     <div class="team-showcase">
       <div class="team-showcase-main">
@@ -1087,6 +1144,12 @@ function renderTeam() {
       <span>Win rate <b class="${percentClass(overview.win_rate)}">${n(overview.win_rate, 1)}%</b></span>
       <span>Round win rate <b class="${percentClass(overview.round_win_rate)}">${n(overview.round_win_rate, 1)}%</b></span>
     </div>`;
+  for (const button of document.querySelectorAll("#teamOverview .team-roster-tab")) {
+    button.addEventListener("click", () => {
+      selectedTeamOverviewRoster = button.dataset.teamRoster;
+      renderTeam();
+    });
+  }
   renderTeamStarters();
   renderRosterTimeline();
   renderRosterHistoryTable();
@@ -1237,6 +1300,10 @@ function render() {
 for (const id of ["playerFilter", "quarterFilter", "mapFilter", "rosterFilter", "resultFilter", "startDate", "endDate"]) {
   document.getElementById(id).addEventListener("change", render);
 }
+document.getElementById("teamMatchRosterFilter").addEventListener("change", event => {
+  selectedTeamMatchRoster = event.target.value;
+  renderTeam();
+});
 for (const button of document.querySelectorAll(".view-tab")) {
   button.addEventListener("click", () => setView(button.dataset.view));
 }
