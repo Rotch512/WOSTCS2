@@ -61,12 +61,17 @@ def sync_roster(settings: Settings) -> None:
 
 def sync_drive_index(settings: Settings) -> None:
     ensure_dir(settings.output_dir)
+    source = "public_html"
+    drive_api_error = ""
     try:
-        files = list_drive_folder_files()
+        files = list_public_drive_folder_files()
     except Exception:
         try:
-            files = list_public_drive_folder_files()
-        except Exception:
+            source = "drive_api"
+            files = list_drive_folder_files()
+        except Exception as exc:
+            drive_api_error = f"{type(exc).__name__}: {exc}"
+            source = "previous_manifest"
             previous = read_json(settings.demo_manifest_path, default={}) or {}
             if not previous.get("demos"):
                 raise
@@ -98,6 +103,8 @@ def sync_drive_index(settings: Settings) -> None:
     versions["drive_replays"] = {
         "folder_id": "1nQ-IeHvFiuDiGI-onjeX_cclHV4yi321",
         "read_at": utc_now_iso(),
+        "source": source,
+        "drive_api_error": drive_api_error,
         "file_count": len(files),
         "valid_replay_count": len(replay_rows),
     }

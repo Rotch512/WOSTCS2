@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 import html
-import os
 import re
 import time
 
@@ -12,8 +11,6 @@ from .sheets import _build_services
 
 
 def download_file(file_id: str, destination: Path) -> Path:
-    if not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
-        return download_public_drive_file(file_id, destination)
     try:
         from googleapiclient.http import MediaIoBaseDownload
     except ImportError as exc:
@@ -114,36 +111,35 @@ def list_drive_folder_files(folder_id: str = REPLAYS_DATA_FOLDER_ID) -> list[dic
 def list_public_drive_folder_files(folder_id: str = REPLAYS_DATA_FOLDER_ID) -> list[dict[str, str]]:
     import requests
 
-    response = requests.get(
-        f"https://drive.google.com/drive/folders/{folder_id}",
-        params={"usp": "drive_link"},
-        timeout=60,
-    )
-    response.raise_for_status()
-    text = response.text
+    urls = [
+        (f"https://drive.google.com/embeddedfolderview", {"id": folder_id}),
+        (f"https://drive.google.com/drive/folders/{folder_id}", {"usp": "drive_link"}),
+    ]
     pattern = re.compile(
-        r'data-id="(?P<id>[A-Za-z0-9_-]{20,})".{0,5000}?'
-        r'aria-label="(?P<name>20\d{6}_[a-z0-9]+_(?:full|subbed|mixed)_(?:win|lose|draw)_\d{1,2}_\d{1,2}\.zip) ',
+        r'(?:id="entry-|data-id=")(?P<id>[A-Za-z0-9_-]{20,})".{0,5000}?'
+        r'(?:<div class="flip-entry-title">|aria-label=")'
+        r'(?P<name>20\d{6}_[a-z0-9]+_(?:full|subbed|mixed)_(?:win|lose|draw)_\d{1,2}_\d{1,2}\.zip)',
         re.DOTALL,
     )
     by_id: dict[str, dict[str, str]] = {}
-    for match in pattern.finditer(text):
-        file_id = match.group("id")
-        name = html.unescape(match.group("name"))
-        by_id[file_id] = {
-            "id": file_id,
-            "name": name,
-            "mimeType": "application/x-zip-compressed",
-            "modifiedTime": "",
-            "size": "",
-            "md5Checksum": "",
-        }
+    for url, params in urls:
+        response = requests.get(url, params=params, timeout=60)
+        response.raise_for_status()
+        for match in pattern.finditer(response.text):
+            file_id = match.group("id")
+            name = html.unescape(match.group("name"))
+            by_id[file_id] = {
+                "id": file_id,
+                "name": name,
+                "mimeType": "application/x-zip-compressed",
+                "modifiedTime": "",
+                "size": "",
+                "md5Checksum": "",
+            }
     return sorted(by_id.values(), key=lambda item: item.get("name", ""))
 
 
 def find_file_in_folder(name: str, folder_id: str = REPLAYS_DATA_FOLDER_ID) -> dict[str, str] | None:
-    if not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
-        raise RuntimeError("Google Drive API credentials are not configured.")
     drive, _ = _build_services()
     response = drive.files().list(
         q=f"'{folder_id}' in parents and trashed = false and name = '{name}'",
@@ -157,15 +153,11 @@ def find_file_in_folder(name: str, folder_id: str = REPLAYS_DATA_FOLDER_ID) -> d
 
 
 def download_text_file(file_id: str) -> str:
-    if not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
-        raise RuntimeError("Google Drive API credentials are not configured.")
     drive, _ = _build_services()
     return drive.files().get_media(fileId=file_id, supportsAllDrives=True).execute().decode("utf-8")
 
 
 def upsert_text_file_in_folder(name: str, content: str, folder_id: str = REPLAYS_DATA_FOLDER_ID) -> str:
-    if not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
-        raise RuntimeError("Google Drive API credentials are not configured.")
     from googleapiclient.http import MediaIoBaseUpload
     import io
 

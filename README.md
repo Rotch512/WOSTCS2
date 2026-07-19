@@ -16,7 +16,10 @@ source .venv/bin/activate
 pip install -e ".[test]"
 ```
 
-Google API credentials are optional for the current public Drive/Sheet setup.
+Google API credentials are optional. The update pipeline reads the public Drive
+folder through Google's anonymous embedded-folder view, and falls back to
+authenticated APIs only if public scraping fails.
+
 When available, Application Default Credentials can be used for authenticated
 Drive downloads:
 
