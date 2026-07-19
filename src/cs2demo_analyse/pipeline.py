@@ -62,10 +62,10 @@ def sync_roster(settings: Settings) -> None:
 def sync_drive_index(settings: Settings) -> None:
     ensure_dir(settings.output_dir)
     try:
-        files = list_public_drive_folder_files()
+        files = list_drive_folder_files()
     except Exception:
         try:
-            files = list_drive_folder_files()
+            files = list_public_drive_folder_files()
         except Exception:
             previous = read_json(settings.demo_manifest_path, default={}) or {}
             if not previous.get("demos"):
