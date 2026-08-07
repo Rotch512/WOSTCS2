@@ -200,7 +200,9 @@ def prune_to_current_replays(settings: Settings) -> None:
 def download_packages(settings: Settings) -> None:
     ensure_dir(settings.packages_dir)
     stats_cache = load_stats_cache(settings)
-    for replay in load_replay_records(settings):
+    replays = list(load_replay_records(settings))
+    total = len(replays)
+    for index, replay in enumerate(replays, 1):
         manifest = read_json(settings.demo_manifest_path, default={}) or {}
         manifest_item = next((item for item in manifest.get("demos", []) if item.get("file_id") == replay.file_id), {})
         if (
@@ -219,7 +221,8 @@ def download_packages(settings: Settings) -> None:
                 state=next_state,
             )
             continue
-        download_file(replay.file_id, destination)
+        print(f"\n[{index}/{total}] {filename}")
+        download_file(replay.file_id, destination, filename)
         update_manifest_item(
             settings.demo_manifest_path,
             replay.file_id,

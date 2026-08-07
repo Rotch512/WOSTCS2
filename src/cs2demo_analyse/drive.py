@@ -5,18 +5,21 @@ import html
 import re
 import time
 
+from tqdm import tqdm
+
 from .config import REPLAYS_DATA_FOLDER_ID
 from .io_utils import ensure_dir
 from .sheets import _build_services
 
 
-def download_file(file_id: str, destination: Path) -> Path:
+def download_file(file_id: str, destination: Path, name: str = "") -> Path:
     try:
         from googleapiclient.http import MediaIoBaseDownload
     except ImportError as exc:
         raise RuntimeError("google-api-python-client is required for Drive downloads.") from exc
 
     ensure_dir(destination.parent)
+    label = name or file_id
     try:
         drive, _ = _build_services()
         request = drive.files().get_media(fileId=file_id, supportsAllDrives=True)
@@ -26,18 +29,24 @@ def download_file(file_id: str, destination: Path) -> Path:
         with temp_destination.open("wb") as fh:
             downloader = MediaIoBaseDownload(fh, request, chunksize=32 * 1024 * 1024)
             done = False
-            while not done:
-                _, done = downloader.next_chunk()
+            with tqdm(unit="B", unit_scale=True, unit_divisor=1024, desc=label, mininterval=0.5) as pbar:
+                while not done:
+                    status, done = downloader.next_chunk()
+                    if pbar.total != status.total_size:
+                        pbar.total = status.total_size
+                    pbar.n = status.resumable_progress
+                    pbar.refresh()
         temp_destination.replace(destination)
         return destination
     except Exception:
-        return download_public_drive_file(file_id, destination)
+        return download_public_drive_file(file_id, destination, name)
 
 
-def download_public_drive_file(file_id: str, destination: Path) -> Path:
+def download_public_drive_file(file_id: str, destination: Path, name: str = "") -> Path:
     import requests
 
     ensure_dir(destination.parent)
+    label = name or file_id
     last_error: Exception | None = None
     for attempt in range(1, 6):
         session = requests.Session()
@@ -52,13 +61,14 @@ def download_public_drive_file(file_id: str, destination: Path) -> Path:
                 action_match = re.search(r'<form[^>]+id="download-form"[^>]+action="([^"]+)"', page)
                 action = action_match.group(1) if action_match else "https://drive.usercontent.google.com/download"
                 params = {"id": file_id, "export": "download", "confirm": "t"}
-                for name in ("uuid", "resourcekey"):
-                    match = re.search(rf'name="{name}" value="([^"]+)"', page)
+                for name_key in ("uuid", "resourcekey"):
+                    match = re.search(rf'name="{name_key}" value="([^"]+)"', page)
                     if match:
-                        params[name] = match.group(1)
+                        params[name_key] = match.group(1)
                 response = session.get(action, params=params, stream=True, timeout=120)
                 response.raise_for_status()
-            return _stream_response_to_file(response, destination)
+            desc = f"{label} (attempt {attempt})" if attempt > 1 else label
+            return _stream_response_to_file(response, destination, desc)
         except requests.RequestException as exc:
             last_error = exc
             temp_destination = destination.with_suffix(destination.suffix + ".part")
@@ -72,14 +82,17 @@ def download_public_drive_file(file_id: str, destination: Path) -> Path:
     raise RuntimeError(f"Failed to download Google Drive file: {file_id}")
 
 
-def _stream_response_to_file(response, destination: Path) -> Path:
+def _stream_response_to_file(response, destination: Path, desc: str = "") -> Path:
     temp_destination = destination.with_suffix(destination.suffix + ".part")
     if temp_destination.exists():
         temp_destination.unlink()
+    total = int(response.headers.get("content-length", 0)) or None
     with temp_destination.open("wb") as fh:
-        for chunk in response.iter_content(chunk_size=32 * 1024 * 1024):
-            if chunk:
-                fh.write(chunk)
+        with tqdm(total=total, unit="B", unit_scale=True, unit_divisor=1024, desc=desc, mininterval=0.5) as pbar:
+            for chunk in response.iter_content(chunk_size=8 * 1024 * 1024):
+                if chunk:
+                    fh.write(chunk)
+                    pbar.update(len(chunk))
     temp_destination.replace(destination)
     return destination
 
@@ -118,7 +131,7 @@ def list_public_drive_folder_files(folder_id: str = REPLAYS_DATA_FOLDER_ID) -> l
     pattern = re.compile(
         r'(?:id="entry-|data-id=")(?P<id>[A-Za-z0-9_-]{20,})".{0,5000}?'
         r'(?:<div class="flip-entry-title">|aria-label=")'
-        r'(?P<name>20\d{6}_[a-z0-9]+_(?:full|subbed|mixed)_(?:win|lose|draw)_\d{1,2}_\d{1,2}\.zip)',
+        r'(?P<name>20\d{6}_[a-z0-9]+_(?:full|subbed)_(?:win|lose|draw)_\d{1,2}_\d{1,2}\.zip)',
         re.DOTALL,
     )
     by_id: dict[str, dict[str, str]] = {}

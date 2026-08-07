@@ -7,7 +7,7 @@ from typing import Any
 from .io_utils import read_json, utc_now_iso, write_json
 
 DEMO_NAME_RE = re.compile(
-    r"^(?P<date>\d{8})_(?P<map>[a-z0-9]+)_(?P<roster>full|subbed|mixed)_"
+    r"^(?P<date>\d{8})_(?P<map>[a-z0-9]+)_(?P<roster>full|subbed)_"
     r"(?P<result>win|lose|draw)_(?P<our>\d{1,2})_(?P<opp>\d{1,2})(?:\.[^.]+)?$",
     re.IGNORECASE,
 )

@@ -61,7 +61,7 @@ def test_sync_drive_index_falls_back_to_drive_api_when_public_scraping_fails(tmp
         return [
             {
                 "id": "drive-file",
-                "name": "20260718_dust2_mixed_win_13_09.zip",
+                "name": "20260718_dust2_subbed_win_13_09.zip",
                 "mimeType": "application/x-zip-compressed",
                 "modifiedTime": "",
                 "size": "",

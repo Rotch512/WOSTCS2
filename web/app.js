@@ -23,7 +23,6 @@ const matchColumns = ["date", "map_name", "match_result", "roster_type", "roster
 const teamMatchColumns = ["date", "map_name", "score_split", "round_win_rate", "match_result", "roster_type", "opening_diff", "clutch_record"];
 const teamRosterFilters = [
   ["full", "Full"],
-  ["full-subbed", "Full+Subbed"],
   ["all", "All"]
 ];
 const statusRank = { "Starter": 0, "Stand-in": 1, "Benched": 2, "Left": 3, "Change": 99 };
@@ -767,7 +766,6 @@ function kdClass(value) {
 function teamRosterSet(filter) {
   return {
     full: new Set(["full"]),
-    "full-subbed": new Set(["full", "subbed"]),
     all: null
   }[filter] || null;
 }
