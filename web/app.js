@@ -945,10 +945,6 @@ function renderFailureList(id, rows, emptyText) {
         <span>${item.round ? "Round" : "Count"}</span>
         <b>${item.round || item.count || 1}</b>
       </div>
-      <div class="failure-state ${String(item.side || "").toLowerCase()}">
-        <span>${item.side}</span>
-        <b>${item.state}</b>
-      </div>
     </div>`).join("");
   for (const row of target.querySelectorAll(".failure-row[data-match-id]")) {
     row.addEventListener("click", () => {

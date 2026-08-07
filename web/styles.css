@@ -895,7 +895,7 @@ label {
 
 .failure-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 64px 74px;
+  grid-template-columns: minmax(0, 1fr) 64px;
   gap: 8px;
   align-items: center;
   min-height: 58px;
