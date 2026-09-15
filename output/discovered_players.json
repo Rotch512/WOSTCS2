@@ -1197,7 +1197,7 @@
     "demos": [
       "1RUntxc6aQFLYG7qLdX2PlGe81tKgLK_Z",
       "1WumIAouab3sVGU52uYeceXtCj6iLYJRv",
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv",
       "1rOYJe7Xp1w1KedQ7JmeVAclGML5GsfHk"
     ],
@@ -1729,9 +1729,8 @@
     ]
   },
   {
-    "demo_count": 2,
+    "demo_count": 1,
     "demos": [
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv"
     ],
     "first_seen": "2026-09-13",
@@ -1829,9 +1828,8 @@
     ]
   },
   {
-    "demo_count": 2,
+    "demo_count": 1,
     "demos": [
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv"
     ],
     "first_seen": "2026-09-13",
@@ -2076,6 +2074,25 @@
   {
     "demo_count": 1,
     "demos": [
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG"
+    ],
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "手持阿姆斯特朗炮的白夜叉"
+    ],
+    "steam64": "76561199026831374",
+    "team_names": [
+      "CT",
+      "TERRORIST"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1sxTZpxQsCMQ8phHil3SDB4tItU2zXYbB"
     ],
     "first_seen": "2026-06-19",
@@ -2243,12 +2260,12 @@
       "1WumIAouab3sVGU52uYeceXtCj6iLYJRv",
       "1WxOlHOpGt5ycDdRtqEw3zJNWFC49FQrI",
       "1XDiS05FEhriANKR40XmZDpF_2buOru37",
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1btXel_kyZSrAzNGlG0rlMVk5UMh6gHq4",
       "1bxkHPOnxIko8YvT_FGw_tkG1BR2XMczH",
       "1cxZ023yljssCOjEToIIH06z5JbPLzIcY",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
       "1m9ETcY649fTXES6kcQWEKnwYqsqTElxu",
       "1nEUCyXO89Znm1EqMnFJ3aUeZKXmK2OYQ",
@@ -2461,9 +2478,8 @@
     ]
   },
   {
-    "demo_count": 2,
+    "demo_count": 1,
     "demos": [
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv"
     ],
     "first_seen": "2026-09-13",
@@ -2478,6 +2494,24 @@
     "team_names": [
       "CT",
       "TERRORIST"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG"
+    ],
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "飞飞鱼丷"
+    ],
+    "steam64": "76561199068495824",
+    "team_names": [
+      "nan"
     ]
   },
   {
@@ -2556,6 +2590,24 @@
     "team_names": [
       "CT",
       "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG"
+    ],
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      ".P1mPle."
+    ],
+    "steam64": "76561199084736110",
+    "team_names": [
       "nan"
     ]
   },
@@ -2689,12 +2741,12 @@
       "1WumIAouab3sVGU52uYeceXtCj6iLYJRv",
       "1WxOlHOpGt5ycDdRtqEw3zJNWFC49FQrI",
       "1XDiS05FEhriANKR40XmZDpF_2buOru37",
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1btXel_kyZSrAzNGlG0rlMVk5UMh6gHq4",
       "1bxkHPOnxIko8YvT_FGw_tkG1BR2XMczH",
       "1cxZ023yljssCOjEToIIH06z5JbPLzIcY",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1jB-_-vmR1yVqFW3WERITfV_7RnxnjXym",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
       "1m9ETcY649fTXES6kcQWEKnwYqsqTElxu",
@@ -3409,9 +3461,8 @@
     ]
   },
   {
-    "demo_count": 2,
+    "demo_count": 1,
     "demos": [
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv"
     ],
     "first_seen": "2026-09-13",
@@ -3611,6 +3662,25 @@
   {
     "demo_count": 1,
     "demos": [
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG"
+    ],
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "让你看看我的火之意志"
+    ],
+    "steam64": "76561199348029647",
+    "team_names": [
+      "CT",
+      "TERRORIST"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1bxkHPOnxIko8YvT_FGw_tkG1BR2XMczH"
     ],
     "first_seen": "2026-08-07",
@@ -3650,9 +3720,8 @@
     ]
   },
   {
-    "demo_count": 2,
+    "demo_count": 1,
     "demos": [
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv"
     ],
     "first_seen": "2026-09-13",
@@ -3846,6 +3915,25 @@
       "CT",
       "TERRORIST",
       "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG"
+    ],
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "Blue Angle☆葵"
+    ],
+    "steam64": "76561199384905359",
+    "team_names": [
+      "CT",
+      "TERRORIST"
     ]
   },
   {
@@ -4642,12 +4730,12 @@
       "1WumIAouab3sVGU52uYeceXtCj6iLYJRv",
       "1WxOlHOpGt5ycDdRtqEw3zJNWFC49FQrI",
       "1XDiS05FEhriANKR40XmZDpF_2buOru37",
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1btXel_kyZSrAzNGlG0rlMVk5UMh6gHq4",
       "1bxkHPOnxIko8YvT_FGw_tkG1BR2XMczH",
       "1cxZ023yljssCOjEToIIH06z5JbPLzIcY",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1jB-_-vmR1yVqFW3WERITfV_7RnxnjXym",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
       "1m9ETcY649fTXES6kcQWEKnwYqsqTElxu",
@@ -4786,12 +4874,12 @@
       "1WumIAouab3sVGU52uYeceXtCj6iLYJRv",
       "1WxOlHOpGt5ycDdRtqEw3zJNWFC49FQrI",
       "1XDiS05FEhriANKR40XmZDpF_2buOru37",
-      "1XaS6GjkYZ42Fp6x2sBJE_rxANDadBL33",
       "1btXel_kyZSrAzNGlG0rlMVk5UMh6gHq4",
       "1bxkHPOnxIko8YvT_FGw_tkG1BR2XMczH",
       "1cxZ023yljssCOjEToIIH06z5JbPLzIcY",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1jB-_-vmR1yVqFW3WERITfV_7RnxnjXym",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
       "1m9ETcY649fTXES6kcQWEKnwYqsqTElxu",
