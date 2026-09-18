@@ -267,6 +267,27 @@
   {
     "demo_count": 1,
     "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "FFzXX",
+      "资深大神 FFzXX"
+    ],
+    "steam64": "76561198148583837",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1Sa5yiybVSzhJ-yPjws_7t87V4hKUKlS0"
     ],
     "first_seen": "2026-07-10",
@@ -484,6 +505,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "华北-狙王"
+    ],
+    "steam64": "76561198283988063",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1zKOZWl-2Wm7kYLjxsHzq89J6ySVaGR9E"
     ],
     "first_seen": "2026-07-11",
@@ -562,6 +603,26 @@
     "team_names": [
       "CT",
       "TERRORIST"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "三鹰亜砂"
+    ],
+    "steam64": "76561198313831449",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
     ]
   },
   {
@@ -835,6 +896,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "阿辰大大"
+    ],
+    "steam64": "76561198393484603",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "12tLxoPo2boEf2dIebBCmKkYS6oOdytVH"
     ],
     "first_seen": "2026-05-29",
@@ -1076,6 +1157,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "小科比肘嘛ma"
+    ],
+    "steam64": "76561198712646635",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1zKOZWl-2Wm7kYLjxsHzq89J6ySVaGR9E"
     ],
     "first_seen": "2026-07-11",
@@ -1291,6 +1392,27 @@
     "team_names": [
       "CT",
       "TERRORIST"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "Donk",
+      "窝要烟牌t"
+    ],
+    "steam64": "76561198789471972",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
     ]
   },
   {
@@ -1516,6 +1638,26 @@
       "ɹɐƃ1ǝʌ"
     ],
     "steam64": "76561198840529313",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "往事皆成雨"
+    ],
+    "steam64": "76561198841792334",
     "team_names": [
       "CT",
       "TERRORIST",
@@ -2390,13 +2532,15 @@
     ]
   },
   {
-    "demo_count": 56,
+    "demo_count": 61,
     "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3",
       "12tLxoPo2boEf2dIebBCmKkYS6oOdytVH",
       "13oKJWDt0mUi5AdQoZWphcBwhpUkYdncz",
       "13wOf_5EFVoe0CBXzQTX2iIGFrddqk1Qe",
       "14laMSQ31F-sygeNCQzdaXUpkiU5RlsF1",
       "18OACrDXHVhgrIRbETQM15_0TYo5BWWVK",
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR",
       "1A4vYBWlG97ObJl7OgkbV-1aen2fqk3Ro",
       "1BYgBjOBrrPOdkH6otfSX5V65L8OIgXUW",
       "1Dtx7-UQ0knSceGLmsJPZio1AL4PRrl-A",
@@ -2425,6 +2569,7 @@
       "1dPsOrQzdogt9vF-5d5VxSpaNfNnkeMlR",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh",
       "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
       "1m9ETcY649fTXES6kcQWEKnwYqsqTElxu",
@@ -2436,6 +2581,7 @@
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv",
       "1rOYJe7Xp1w1KedQ7JmeVAclGML5GsfHk",
       "1rqsxjFQk6dSozqF3HggjUUoSl_ciIZgS",
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd",
       "1sbej1_RWp3_TFr85bmgx6-xH809pP17V",
       "1seZzj6ln-XFm3M5H14-f0z6xfbZXwn_H",
       "1sxTZpxQsCMQ8phHil3SDB4tItU2zXYbB",
@@ -2446,11 +2592,12 @@
       "1wD2Vxd19E4lxE9FrVU3UxVWWJnIT99Jp",
       "1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn",
       "1wePYAealsXvmtzeKjR7JZU5gnxqXqPg1",
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L",
       "1yoef_8CjPYTbmJBvKem-cAiKWOuLs4Bu",
       "1zKOZWl-2Wm7kYLjxsHzq89J6ySVaGR9E"
     ],
     "first_seen": "2026-05-28",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-18",
     "maps": [
       "ancient",
       "cache",
@@ -2910,14 +3057,16 @@
     ]
   },
   {
-    "demo_count": 58,
+    "demo_count": 63,
     "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3",
       "12tLxoPo2boEf2dIebBCmKkYS6oOdytVH",
       "13oKJWDt0mUi5AdQoZWphcBwhpUkYdncz",
       "13wOf_5EFVoe0CBXzQTX2iIGFrddqk1Qe",
       "14laMSQ31F-sygeNCQzdaXUpkiU5RlsF1",
       "183aPXFfdohto5kf3cayOZREeN-5swbeE",
       "18OACrDXHVhgrIRbETQM15_0TYo5BWWVK",
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR",
       "1A4vYBWlG97ObJl7OgkbV-1aen2fqk3Ro",
       "1BYgBjOBrrPOdkH6otfSX5V65L8OIgXUW",
       "1Dtx7-UQ0knSceGLmsJPZio1AL4PRrl-A",
@@ -2947,6 +3096,7 @@
       "1dPsOrQzdogt9vF-5d5VxSpaNfNnkeMlR",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh",
       "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1jB-_-vmR1yVqFW3WERITfV_7RnxnjXym",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
@@ -2958,6 +3108,7 @@
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv",
       "1rOYJe7Xp1w1KedQ7JmeVAclGML5GsfHk",
       "1rqsxjFQk6dSozqF3HggjUUoSl_ciIZgS",
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd",
       "1sbej1_RWp3_TFr85bmgx6-xH809pP17V",
       "1seZzj6ln-XFm3M5H14-f0z6xfbZXwn_H",
       "1sxTZpxQsCMQ8phHil3SDB4tItU2zXYbB",
@@ -2968,11 +3119,12 @@
       "1wD2Vxd19E4lxE9FrVU3UxVWWJnIT99Jp",
       "1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn",
       "1wePYAealsXvmtzeKjR7JZU5gnxqXqPg1",
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L",
       "1yoef_8CjPYTbmJBvKem-cAiKWOuLs4Bu",
       "1zKOZWl-2Wm7kYLjxsHzq89J6ySVaGR9E"
     ],
     "first_seen": "2026-05-28",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-18",
     "maps": [
       "ancient",
       "cache",
@@ -3002,6 +3154,27 @@
       "魔男"
     ],
     "steam64": "76561199117157241",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "TXWTXW田曦薇",
+      "monesy"
+    ],
+    "steam64": "76561199118552504",
     "team_names": [
       "CT",
       "TERRORIST",
@@ -3319,6 +3492,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "大清第一沙子"
+    ],
+    "steam64": "76561199187106027",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1RUntxc6aQFLYG7qLdX2PlGe81tKgLK_Z"
     ],
     "first_seen": "2026-06-05",
@@ -3521,6 +3714,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "Glim-"
+    ],
+    "steam64": "76561199212092706",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1U9t2EoNU1JXbI8NQS69rbn2dtB8ELM01"
     ],
     "first_seen": "2026-08-07",
@@ -3539,13 +3752,35 @@
     ]
   },
   {
-    "demo_count": 39,
+    "demo_count": 1,
     "demos": [
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "菜汪不是菜狗"
+    ],
+    "steam64": "76561199214804955",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 44,
+    "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3",
       "13oKJWDt0mUi5AdQoZWphcBwhpUkYdncz",
       "13wOf_5EFVoe0CBXzQTX2iIGFrddqk1Qe",
       "14laMSQ31F-sygeNCQzdaXUpkiU5RlsF1",
       "183aPXFfdohto5kf3cayOZREeN-5swbeE",
       "18OACrDXHVhgrIRbETQM15_0TYo5BWWVK",
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR",
       "1BYgBjOBrrPOdkH6otfSX5V65L8OIgXUW",
       "1Dtx7-UQ0knSceGLmsJPZio1AL4PRrl-A",
       "1F-CJXPsvD0_YdKQlETfDwlz2SeJYmIH7",
@@ -3565,12 +3800,14 @@
       "1dPsOrQzdogt9vF-5d5VxSpaNfNnkeMlR",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh",
       "1jB-_-vmR1yVqFW3WERITfV_7RnxnjXym",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
       "1m9ETcY649fTXES6kcQWEKnwYqsqTElxu",
       "1nEUCyXO89Znm1EqMnFJ3aUeZKXmK2OYQ",
       "1q3T-_o7ai1W4rjnZOVFm0a7YMXcH3mQd",
       "1qHwUBEIxxpQZvfzLCUJn4Xag7ftxv7eS",
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd",
       "1sbej1_RWp3_TFr85bmgx6-xH809pP17V",
       "1seZzj6ln-XFm3M5H14-f0z6xfbZXwn_H",
       "1sxTZpxQsCMQ8phHil3SDB4tItU2zXYbB",
@@ -3578,11 +3815,12 @@
       "1um3k9X1l1mNr9rALkEE_-xJRm0Fp9CAL",
       "1vFxVze13qjPJrP_lmfqMP-K_3qOKJjIB",
       "1wD2Vxd19E4lxE9FrVU3UxVWWJnIT99Jp",
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L",
       "1yoef_8CjPYTbmJBvKem-cAiKWOuLs4Bu",
       "1zKOZWl-2Wm7kYLjxsHzq89J6ySVaGR9E"
     ],
     "first_seen": "2026-06-12",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-18",
     "maps": [
       "ancient",
       "cache",
@@ -3639,6 +3877,49 @@
       "用户0804jSl5UDyM"
     ],
     "steam64": "76561199234430663",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "ropz",
+      "盛夏争锋 ropz",
+      "盛夏争锋 南天门阿Giao"
+    ],
+    "steam64": "76561199234867998",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "乃栖",
+      "盛夏争锋 乃栖"
+    ],
+    "steam64": "76561199241581222",
     "team_names": [
       "CT",
       "TERRORIST",
@@ -4100,6 +4381,27 @@
   {
     "demo_count": 1,
     "demos": [
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "猪八戒",
+      "用户0905ybuKpFKg"
+    ],
+    "steam64": "76561199378874969",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1q3T-_o7ai1W4rjnZOVFm0a7YMXcH3mQd"
     ],
     "first_seen": "2026-06-20",
@@ -4132,6 +4434,27 @@
       "西若"
     ],
     "steam64": "76561199381217038",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "再比比给你冯莎拉",
+      "压力我就骂"
+    ],
+    "steam64": "76561199383712912",
     "team_names": [
       "CT",
       "TERRORIST",
@@ -4749,6 +5072,46 @@
   {
     "demo_count": 1,
     "demos": [
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "用户0225rFGrAG17"
+    ],
+    "steam64": "76561199518081913",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "ALANPOTE"
+    ],
+    "steam64": "76561199520140023",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1WumIAouab3sVGU52uYeceXtCj6iLYJRv"
     ],
     "first_seen": "2026-07-11",
@@ -4961,7 +5324,7 @@
     ]
   },
   {
-    "demo_count": 59,
+    "demo_count": 61,
     "demos": [
       "12tLxoPo2boEf2dIebBCmKkYS6oOdytVH",
       "13oKJWDt0mUi5AdQoZWphcBwhpUkYdncz",
@@ -5010,6 +5373,7 @@
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv",
       "1rOYJe7Xp1w1KedQ7JmeVAclGML5GsfHk",
       "1rqsxjFQk6dSozqF3HggjUUoSl_ciIZgS",
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd",
       "1sbej1_RWp3_TFr85bmgx6-xH809pP17V",
       "1seZzj6ln-XFm3M5H14-f0z6xfbZXwn_H",
       "1sxTZpxQsCMQ8phHil3SDB4tItU2zXYbB",
@@ -5020,11 +5384,12 @@
       "1wD2Vxd19E4lxE9FrVU3UxVWWJnIT99Jp",
       "1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn",
       "1wePYAealsXvmtzeKjR7JZU5gnxqXqPg1",
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L",
       "1yoef_8CjPYTbmJBvKem-cAiKWOuLs4Bu",
       "1zKOZWl-2Wm7kYLjxsHzq89J6ySVaGR9E"
     ],
     "first_seen": "2026-05-28",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-18",
     "maps": [
       "ancient",
       "cache",
@@ -5110,13 +5475,15 @@
     ]
   },
   {
-    "demo_count": 54,
+    "demo_count": 59,
     "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3",
       "12tLxoPo2boEf2dIebBCmKkYS6oOdytVH",
       "13oKJWDt0mUi5AdQoZWphcBwhpUkYdncz",
       "13wOf_5EFVoe0CBXzQTX2iIGFrddqk1Qe",
       "14laMSQ31F-sygeNCQzdaXUpkiU5RlsF1",
       "183aPXFfdohto5kf3cayOZREeN-5swbeE",
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR",
       "1A4vYBWlG97ObJl7OgkbV-1aen2fqk3Ro",
       "1BYgBjOBrrPOdkH6otfSX5V65L8OIgXUW",
       "1Dtx7-UQ0knSceGLmsJPZio1AL4PRrl-A",
@@ -5143,6 +5510,7 @@
       "1cxZ023yljssCOjEToIIH06z5JbPLzIcY",
       "1f3yA1Ea_PSIWZmIS2_AUQMVdp5xcE6-z",
       "1i9ZA83gD76hUHaVquc6I61nStOpMdDgn",
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh",
       "1iaGudBWK_q-zofUMsDiNGymOiHi7l3PG",
       "1jB-_-vmR1yVqFW3WERITfV_7RnxnjXym",
       "1lWsyso6uSuYobuU2ZYBokKDpkBOzIBJ6",
@@ -5155,6 +5523,7 @@
       "1r3AckgD3fno4JxgJ_gFy1oc2X24n0Ulv",
       "1rOYJe7Xp1w1KedQ7JmeVAclGML5GsfHk",
       "1rqsxjFQk6dSozqF3HggjUUoSl_ciIZgS",
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd",
       "1sbej1_RWp3_TFr85bmgx6-xH809pP17V",
       "1seZzj6ln-XFm3M5H14-f0z6xfbZXwn_H",
       "1sxTZpxQsCMQ8phHil3SDB4tItU2zXYbB",
@@ -5164,11 +5533,12 @@
       "1vFxVze13qjPJrP_lmfqMP-K_3qOKJjIB",
       "1wQffgQnyZ8cs0m6PHgBzJ_7gVDvV1CAn",
       "1wePYAealsXvmtzeKjR7JZU5gnxqXqPg1",
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L",
       "1yoef_8CjPYTbmJBvKem-cAiKWOuLs4Bu",
       "1zKOZWl-2Wm7kYLjxsHzq89J6ySVaGR9E"
     ],
     "first_seen": "2026-05-28",
-    "last_seen": "2026-09-14",
+    "last_seen": "2026-09-18",
     "maps": [
       "ancient",
       "cache",
@@ -5216,6 +5586,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "白宫自由人monkey"
+    ],
+    "steam64": "76561199571839685",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1VX9eqHyLLlcGrgM_2JMlG9XfeamTxcfQ"
     ],
     "first_seen": "2026-08-07",
@@ -5227,6 +5617,26 @@
       "用户0624fyGaxQcV"
     ],
     "steam64": "76561199573973085",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "狮心会会长楚子航"
+    ],
+    "steam64": "76561199574696216",
     "team_names": [
       "CT",
       "TERRORIST",
@@ -5500,6 +5910,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1y1gVLey4N_ttsquH_l8s8H9wf06Z1I1L"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "四月是半猫的谎言"
+    ],
+    "steam64": "76561199702535637",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1Kb-_DOKuIhIJtb5ynouhriw9SaKe4pDW"
     ],
     "first_seen": "2026-05-30",
@@ -5681,6 +6111,26 @@
   {
     "demo_count": 1,
     "demos": [
+      "1sXwxNGxcr0ciW5_wqsQ-Luj9egSF7Epd"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "mihedao"
+    ],
+    "steam64": "76561199726498149",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
       "1q5C_G5Z9DS8Zjmyyfih05NW6TTK7-DVR"
     ],
     "first_seen": "2026-07-07",
@@ -5732,6 +6182,26 @@
       "用户0306Knqu6PLE"
     ],
     "steam64": "76561199746056055",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "故宫第一巴图鲁"
+    ],
+    "steam64": "76561199751683669",
     "team_names": [
       "CT",
       "TERRORIST",
@@ -5950,6 +6420,68 @@
       "爱马枪的伍六七"
     ],
     "steam64": "76561199772384552",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "用户0221eRerSCO1"
+    ],
+    "steam64": "76561199776614916",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "SSSleep"
+    ],
+    "steam64": "76561199779989785",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 3,
+    "demos": [
+      "1-rtRaD7zW8Pz6RD6vO1UoEOAsnUu7xq3",
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR",
+      "1iHpK18afnnNJ7N4VXQzphyr9rkB_KNMh"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "Ramos4Madrid"
+    ],
+    "steam64": "76561199781354495",
     "team_names": [
       "CT",
       "TERRORIST",
@@ -6333,6 +6865,26 @@
       "91-0先生"
     ],
     "steam64": "76561199865113954",
+    "team_names": [
+      "CT",
+      "TERRORIST",
+      "nan"
+    ]
+  },
+  {
+    "demo_count": 1,
+    "demos": [
+      "19cWtBUPVZm2YmJe8f4_2LN136KqzvoJR"
+    ],
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "maps": [
+      "dust2"
+    ],
+    "names": [
+      "Mars0"
+    ],
+    "steam64": "76561199866393325",
     "team_names": [
       "CT",
       "TERRORIST",
