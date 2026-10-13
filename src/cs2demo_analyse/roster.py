@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from dataclasses import replace
 from datetime import date
 
 from .config import COUNTED_ROSTER_STATUSES
@@ -27,6 +28,18 @@ def load_roster_intervals(rows: list[dict[str, str]]) -> list[RosterInterval]:
                 status=status,
             )
         )
+    # Status changes and account changes are independent timelines. The next
+    # event closes an open interval, so Sheets no longer needs an End column.
+    timelines: dict[tuple[str, bool], list[int]] = defaultdict(list)
+    for index, interval in enumerate(intervals):
+        timelines[(interval.player, interval.status.lower() == "change")].append(index)
+    for indices in timelines.values():
+        indices.sort(key=lambda index: (intervals[index].start, index))
+        for index, next_index in zip(indices, indices[1:]):
+            interval = intervals[index]
+            next_start = intervals[next_index].start
+            if interval.end is None or interval.end > next_start:
+                intervals[index] = replace(interval, end=next_start)
     return intervals
 
 

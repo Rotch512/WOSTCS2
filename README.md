@@ -117,8 +117,12 @@ or delete `.cache/cs2demo/packages` and `.cache/cs2demo/demos` when doing a full
 from-zero rebuild.
 
 Roster is the identity source. `RosterVisualisation/Data` must include `Player`,
-`Start`, `End`, `Status`, and `SteamID`. `Starter`, `Stand-in`, and `Benched`
-are counted; `Left` is not counted.
+`Start`, `Status`, and `SteamID`. `End` is optional: each player's next status
+record automatically ends the previous status on its Start date. Records are
+ordered by Start, with later sheet rows taking precedence on the same date.
+An explicit End can close an interval earlier. `Starter`, `Stand-in`, and
+`Benched` are counted; `Left` is not counted. `Change` records track account
+changes separately and do not end the player's team status.
 
 `Rating` is a transparent Rating 3.0 proxy based on HLTV-public sub-rating
 categories: Kill, Damage, Survival, KAST, Multi-Kill, and a Round Swing proxy.

@@ -205,9 +205,12 @@ function rosterOrder() {
 }
 
 function latestRosterStatus(player) {
-  const rows = rosterRows.filter(row => (row.Player || row.player) === player && !/^change$/i.test(row.Status || row.status));
+  const today = new Date();
+  const rows = normalizedRosterRows()
+    .filter(row => row.player === player && row.startDate && row.startDate <= today)
+    .sort((a, b) => a.startDate - b.startDate || a.index - b.index);
   if (!rows.length) return "";
-  return rows[rows.length - 1].Status || rows[rows.length - 1].status || "";
+  return rows[rows.length - 1].status;
 }
 
 function dateValue(value) {
@@ -218,11 +221,11 @@ function dateValue(value) {
 
 function normalizedRosterRows() {
   const rows = rosterRows.map((row, index) => {
-    const player = row.Player || row.player || "";
-    const start = row.Start || row.start || "";
-    const end = row.End || row.end || "";
-    const status = row.Status || row.status || "";
-    const steam64 = row.SteamID || row.steam64 || row.steam_id || "";
+    const player = (row.Player || row.player || "").trim();
+    const start = (row.Start || row.start || "").trim();
+    const end = (row.End || row.end || "").trim();
+    const status = (row.Status || row.status || "").trim();
+    const steam64 = (row.SteamID || row.steam64 || row.steam_id || "").trim();
     return {
       index,
       player,
@@ -235,17 +238,37 @@ function normalizedRosterRows() {
     };
   }).filter(row => row.player && row.start && row.status);
 
+  const timelines = new Map();
   for (const row of rows) {
-    if (!/^change$/i.test(row.status)) continue;
-    const target = rows.find(r =>
-      r.player === row.player &&
-      !/^(left|change)$/i.test(r.status) &&
-      r.startDate && r.startDate <= row.startDate &&
-      (!r.endDate || r.endDate >= row.startDate)
-    );
-    if (target) target.steam64 = row.steam64;
+    const key = JSON.stringify([row.player, /^change$/i.test(row.status)]);
+    if (!timelines.has(key)) timelines.set(key, []);
+    timelines.get(key).push(row);
   }
-  return rows.filter(row => !/^change$/i.test(row.status));
+  for (const timeline of timelines.values()) {
+    timeline.sort((a, b) => a.startDate - b.startDate || a.index - b.index);
+    for (let i = 0; i < timeline.length - 1; i++) {
+      const row = timeline[i];
+      const next = timeline[i + 1];
+      if (next.startDate && (!row.endDate || row.endDate > next.startDate)) {
+        row.end = next.start;
+        row.endDate = next.startDate;
+      }
+    }
+  }
+  const today = new Date();
+  const changes = rows.filter(row => /^change$/i.test(row.status) && row.startDate)
+    .sort((a, b) => a.startDate - b.startDate || a.index - b.index);
+  const statuses = rows.filter(row => !/^change$/i.test(row.status));
+  for (const row of statuses) {
+    // Historical stints show the account at their end; current stints use today.
+    const historical = row.endDate && row.endDate <= today;
+    const at = historical ? row.endDate : today;
+    const change = changes.filter(change => change.player === row.player &&
+      (historical ? change.startDate < at : change.startDate <= at) &&
+      (!change.endDate || (historical ? change.endDate >= at : change.endDate > at))).at(-1);
+    if (change) row.steam64 = change.steam64;
+  }
+  return statuses;
 }
 
 function isCurrentRosterRow(row) {
@@ -262,8 +285,7 @@ function currentRosterRows() {
 }
 
 function currentStarters() {
-  const starters = currentRosterRows().filter(row => /^starter$/i.test(row.status));
-  return starters.length ? starters : currentRosterRows().slice(0, 5);
+  return currentRosterRows().filter(row => /^starter$/i.test(row.status));
 }
 
 function playerSummaryByName() {
